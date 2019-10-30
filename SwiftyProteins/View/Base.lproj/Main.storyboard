@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKx-2R-JEO">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Authorization-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adrien-converse-kCrrUx7US04-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="3RQ-Wi-dSD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9M-EP-YZi">
+                                <rect key="frame" x="137" y="378" width="140" height="140"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Ze8-cQ-sC9"/>
+                                    <constraint firstAttribute="height" constant="140" id="dAA-Jr-0yN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="toichIDAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2X-Rk-GR2"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgR-lg-rSr">
+                                <rect key="frame" x="170" y="681" width="74" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="1" green="0.91940931579999996" blue="0.17201754429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Oc-2C-OAb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3RQ-Wi-dSD" secondAttribute="bottom" id="2OQ-5Y-C2t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jgR-lg-rSr" secondAttribute="bottom" constant="139" id="MpQ-2M-Czd"/>
+                            <constraint firstItem="3RQ-Wi-dSD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TDZ-yv-LuG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jgR-lg-rSr" secondAttribute="trailing" constant="170" id="Uzv-dI-S5p"/>
+                            <constraint firstItem="3RQ-Wi-dSD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bLh-df-1sJ"/>
+                            <constraint firstItem="jgR-lg-rSr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="byU-1W-Dyk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3RQ-Wi-dSD" secondAttribute="trailing" id="dbo-uJ-8t1"/>
+                            <constraint firstItem="c9M-EP-YZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e8N-yp-uXX"/>
+                            <constraint firstItem="c9M-EP-YZi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vsH-4i-37Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authorization" id="pXZ-Gs-ork"/>
+                    <connections>
+                        <outlet property="simpleSignInButton" destination="jgR-lg-rSr" id="G6i-Sg-dmB"/>
+                        <outlet property="touchIDButton" destination="c9M-EP-YZi" id="NpP-ue-Z75"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="43.526785714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uOc-GX-ndh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PKx-2R-JEO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bq4-ss-y3D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ADm-Fx-yBk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bu5-W5-QQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="adrien-converse-kCrrUx7US04-unsplash" width="2016" height="1512"/>
+    </resources>
+</document>
